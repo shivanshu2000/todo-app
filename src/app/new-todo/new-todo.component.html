@@ -1,0 +1,15 @@
+<div class="row my-5 p-4" style="border: 2px solid darkslategrey; border-radius: 5px;">
+    <div class="col-12 d-flex justify-content-center" style="width:100%">
+        <div style="width:80%">
+            <div class="form-group">
+                <label for="todo">To Do:</label>
+                <input #todoName [(ngModel)]="toDoString" type="text" id="todo" class="form-control" placeholder="Your todo here...">
+            </div>
+            
+            <button [disabled]="!(toDoString.length>0)" class="btn btn-inline btn-outline-dark" (click)="addToDo(todoName.value)">
+            Add To Do
+            </button>
+        </div>
+    </div>
+</div>
+
